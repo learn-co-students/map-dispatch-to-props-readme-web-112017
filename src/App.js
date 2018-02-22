@@ -27,10 +27,10 @@ const mapStateToProps = (state) => {
   };
 };
 
-const mapDispatchToProps = () => {
-  return {
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators({
     addItem: addItem
-  };
+  }, dispatch);
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
